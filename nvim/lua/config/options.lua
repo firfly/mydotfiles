@@ -1,3 +1,4 @@
+vim.o.termguicolors = true -- true colors for colorizer
 vim.opt.expandtab = true -- Convert tabs to spaces
 vim.opt.shiftwidth = 4 -- Amount to indent with << and >>
 vim.opt.tabstop = 4 -- How many spaces are shown per Tab
@@ -48,10 +49,10 @@ vim.opt.scrolloff = 5
 
 -- Highlight text for some time after yanking
 vim.api.nvim_create_autocmd("TextYankPost", {
-	group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-	desc = "Highlight yank",
+    group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
+    pattern = "*",
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+    desc = "Highlight yank",
 })

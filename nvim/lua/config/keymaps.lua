@@ -8,3 +8,4 @@ vim.keymap.set("n", "<leader>cf", function()
         lsp_format = "fallback",
     })
 end, { desc = "Format current file" })
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
