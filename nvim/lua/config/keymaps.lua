@@ -9,3 +9,8 @@ vim.keymap.set("n", "<leader>cf", function()
     })
 end, { desc = "Format current file" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", opts)
+
+vim.keymap.set("n", "<leader>uh", function()
+    -- vim.lsp.inlay_hint(0, nil)
+    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end, { desc = "Toggle Inlay Hints" })

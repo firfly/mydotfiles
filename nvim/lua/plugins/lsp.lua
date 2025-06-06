@@ -1,6 +1,7 @@
 return {
     -- Main LSP Configuration
     "neovim/nvim-lspconfig",
+    inlay_hints = { enabled = true },
     dependencies = {
         -- Automatically install LSPs and related tools to stdpath for Neovim
         -- Mason must be loaded before its dependents so we need to set it up here.
@@ -37,7 +38,6 @@ return {
         --
         -- If you're wondering about lsp vs treesitter, you can check out the wonderfully
         -- and elegantly composed help section, `:help lsp-vs-treesitter`
-
         --  This function gets run when an LSP attaches to a particular buffer.
         --    That is to say, every time a new file is opened that is associated with
         --    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
@@ -207,7 +207,17 @@ return {
         local servers = {
             bashls = {},
             marksman = {},
-            gopls = {},
+            gopls = {
+                hints = {
+                    rangeVariableTypes = true,
+                    parameterNames = true,
+                    constantValues = true,
+                    assignVariableTypes = true,
+                    compositeLiteralFields = true,
+                    compositeLiteralTypes = true,
+                    functionTypeParameters = true,
+                },
+            },
             -- clangd = {},
             -- gopls = {},
             -- pyright = {},
@@ -234,6 +244,9 @@ return {
                 -- diagnostics = { disable = { 'missing-fields' } },
                 --   },
                 -- },
+                Lua = {
+                    hint = { enable = true },
+                },
             },
         }
 
