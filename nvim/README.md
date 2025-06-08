@@ -35,3 +35,54 @@ If you are interested my currently used personal configuration and setup, you ca
 - [X] dressing.nvim
 - [X] conform.nvim
 - [X] blink-cmp
+
+# frac 
+## header 2
+### header 3
+#### header 4
+
+$$ 
+\frac{abc123}{xyz123}
+$$
+
+
+##### header 5 
+
+$$
+\left|\begin{matrix}
+a & b & c \\
+d & e & f \\
+g & h & i
+\end{matrix} \right|
+$$
+
+| Column1 | Column2 | Column3 |
+| --------------- | --------------- | --------------- |
+| Item1.1 | Item2.1 | Item3.1 |
+| Item1.2 | Item2.2 | Item3.2 |
+| Item1.3 | Item2.3 | Item3.3 |
+| Item1.4 | Item2.4 | Item3.4 |
+
+
+
+```python
+import subprocess
+
+def is_website_reachable():
+    try:
+        subprocess.run(["ping","-c","1","example.com"], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        print("Website is reachable")
+        except subprocess.CalledProcessError:
+            pass
+
+        is_website_reachable()
+```
+
+
+### Without prettier-ignore
+
+- Below I will not add <!-- prettier-ignore-->, so notice how prettier will auto format the callouts
+- Below ones work with snippets:
+[!note] This is a "note"
+[!tip] This is a "tip"
+

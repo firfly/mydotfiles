@@ -8,6 +8,8 @@ return {
             ensure_installed = {
                 "c",
                 "lua",
+                "markdown",
+                "markdown_inline",
                 "vim",
                 "vimdoc",
                 "dockerfile",
@@ -22,6 +24,8 @@ return {
                 "javadoc",
                 "json",
                 "python",
+                "regex",
+                "typescript",
                 "sql",
                 "yaml",
             },
